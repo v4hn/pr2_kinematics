@@ -27,6 +27,7 @@ add_library(pr2_arm_kinematics_lib
   src/pr2_arm_kinematics.cpp
   src/pr2_arm_kinematics_plugin.cpp
 )
+add_dependencies(pr2_arm_kinematics_lib ${catkin_EXPORTED_TARGETS})
 
 add_executable(pr2_arm_kinematics_node src/main.cpp)
 target_link_libraries(pr2_arm_kinematics_node pr2_arm_kinematics_lib ${catkin_LIBRARIES})
